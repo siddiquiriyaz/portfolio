@@ -5,7 +5,7 @@ body {
 }
 
 .swiper {
-  width: 80%;
+  width: 60%;
   height: 800px;
   margin: auto;
 }
@@ -17,7 +17,7 @@ body {
 }
 
 .swiper-slide img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   border-radius: 10px;
 }
