@@ -1,23 +1,218 @@
+/*TAB Start*/
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
-  text-align: center;
-  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
-.swiper {
-  width: 60%;
-  height: 800px;
+/* Header container */
+header {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Navigation layout */
+nav {
+  max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.swiper-slide {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+/* Logo styles */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ad1083;
+  padding: 20px 0;
 }
 
-.swiper-slide img {
-  max-width: 70%;
-  height: auto;
-  border-radius: 10px;
+
+/* Navigation list styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
+
+.nav-links li a {
+  display: block;
+  padding: 15px 10px;
+  color: #001f4d;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.nav-links li a:hover {
+  background-color: #f0f4f8;
+}
+
+/* ✅ Responsive styles - Grid for mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #f9f9f9;
+  }
+}
+/*End TAB*/
+
+/*About Start*/
+
+section#about {
+  padding: 20px 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+.about-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+}
+.about-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.intro-text {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.pink {
+  color: #e91e63;
+}
+
+.green {
+  color: #4caf50;
+}
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 22px;
+  }
+
+  .about-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.about-card p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.about-buttons .btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #001f4d;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.about-buttons .btn:hover {
+  background: #003366;
+}
+
+
+/*About End*/
+
+
+/*Start project*/
+
+section#projects {
+  padding: 20px 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+.projects-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.screenshots {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.screenshots img {
+  height: 200px; /* Adjust as needed */
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+/*End Project*/
