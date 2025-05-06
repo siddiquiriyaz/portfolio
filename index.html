@@ -1,31 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My App Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Riyaz Siddiqui</title>
+  <link rel="icon" href="assets/profile.jpg" type="image/png" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
 </head>
 <body>
-  <h1>My App Portfolio</h1>
+  <header>
+    <nav>
+      <div class="logo">Mohammed Riyaz Siddiqui</div> <!-- Add this -->
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="assets/images/app1.png" alt="App 1" />
-        <h3>App Name 1</h3>
-        <p>This is the description of App 1.</p>
+  <section id="about" data-aos="fade-up">
+    <div class="about-card">
+      <div class="about-header">
+        <img src="assets/profile.jpg" alt="Profile" class="about-image">
+        <div class="about-info">
+          <h2 class="intro-text">
+            Hello, I’m <span class="pink">Mohammed Riyaz Siddiqui</span>,
+            a professional <span class="green">Sr mobile developer</span> specializing in Android and Flutter.
+          </h2>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="assets/images/app2.png" alt="App 2" />
-        <h3>App Name 2</h3>
-        <p>This is the description of App 2.</p>
+      <p>🚀 I’m a Senior Mobile Developer with 5+ years of experience in building reliable and high-performing mobile applications for Android and Flutter. I’ve developed 30+ mobile apps and have led several key projects, always focusing on clean code and smooth user experiences.</p>
+      <P>Currently, I work at PremitiveKey, where I contribute to developing innovative and impactful mobile solutions.</p>
+
+      <h4>Skills & Expertise:</h4>
+
+      <p>📱 Android & Flutter Development – Building robust and cross-platform apps for both Android and iOS.</p>
+
+      <p> ☕ Kotlin & Java – Proficient in modern and legacy Android development.</p>
+
+      <p>  🧩 Flutter – Creating smooth, efficient, and highly functional cross-platform applications.</p>
+
+      <p>🏗️ Architecture & Optimization – Expertise in MVVM, Clean Architecture, Coroutines, Flow, and Hilt for scalable and reactive code.</p>
+
+      <p>  🎯 State Management – Skilled in GetX for Flutter state management.</p>
+
+      <p>  🧠 Project Leadership – Independently managing and leading mobile projects from start to finish.</p>
+      <div class="about-buttons">
+        <a href="#contact" class="btn">Contact Us</a>
+        <a href="assets/resume.pdf" class="btn" download>Get Resume</a>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <section id="projects" data-aos="fade-up">
+    <div class="projects-card">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Awesome App</h3>
+        <p><strong>Skills:</strong> Flutter, Firebase</p>
+        <p>A social media app with real-time chat, feed, and notifications.</p>
+        <div class="screenshots">
+          <img src="assets/project1/1.png" alt="Screen 1">
+          <img src="assets/project1/2.png" alt="Screen 2">
+          <img src="assets/project1/3.png" alt="Screen 3">
+          <img src="assets/project1/1.png" alt="Screen 1">
+          <img src="assets/project1/2.png" alt="Screen 2">
+          <img src="assets/project1/3.png" alt="Screen 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
