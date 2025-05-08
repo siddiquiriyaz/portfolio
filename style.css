@@ -69,18 +69,30 @@ nav {
     align-items: flex-start;
   }
 
+  .logo {
+    margin-bottom: 10px;
+    font-size: 18px; /* Adjust as needed */
+  }
+
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 10px;
     width: 100%;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .nav-links li {
+    flex: 0 0 auto;
   }
 
   .nav-links li a {
-    width: 100%;
-    padding: 15px 0;
+    padding: 10px 15px;
+    white-space: nowrap;
     background-color: #f9f9f9;
+    font-size: 14px;
+    border-radius: 5px;
   }
 }
 /*End TAB*/
