@@ -78,9 +78,9 @@ nav {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 10px;
+    gap: 6px;
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
   }
 
   .nav-links li {
@@ -91,11 +91,10 @@ nav {
     padding: 6px 10px;
     white-space: nowrap;
     background-color: #f9f9f9;
-    font-size: 12px;
+    font-size: 11px;
     border-radius: 4px;
   }
 }
-
 /*End TAB*/
 
 /*About Start*/
