@@ -1,86 +1,877 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Riyaz Siddiqui</title>
-  <base href="/portfolio/">
-  <link rel="icon" href="/portfolio/assets/profile.jpeg" type="image/jpeg" />
-  <link rel="stylesheet" href="/portfolio/style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyaz Siddiqui</title>
+    <base href="/portfolio/">
+    <link rel="icon" href="/portfolio/assets/profile.jpeg" type="image/jpeg"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #4C1D95;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #991B1B;
+            border-radius: 4px;
+        }
+
+        /* Active nav link */
+        .nav-link.active {
+            color: #991B1B;
+            font-weight: 600;
+        }
+
+        /* Project card hover effect */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">Mohammed Riyaz Siddiqui</div> <!-- Add this -->
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="about" data-aos="fade-up">
-    <div class="about-card">
-      <div class="about-header">
-        <img src="/portfolio/assets/profile.jpeg" alt="Profile" class="about-image">
-        <div class="about-info">
-          <h2 class="intro-text">
-            👋 Hi, I'm <span class="pink">Mohammed Riyaz Siddiqui</span>,
-            🚀 <span class="green">Senior Mobile Developer</span> | Android & Flutter | 5+ Years Experience.
-          </h2>
+<body class="font-sans bg-gray-50 text-gray-800">
+<!-- Navigation -->
+<nav class="fixed w-full bg-white shadow-sm z-50">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <a href="#" class="ext-2xl font-bold text-[#4C1D95]">Riyaz Siddiqui</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-purple-900 transition">Home</a>
+                <a href="#about" class="nav-link hover:text-purple-900 transition">About</a>
+                <a href="#projects" class="nav-link hover:text-purple-900 transition">Projects</a>
+                <a href="#skills" class="nav-link hover:text-purple-900 transition">Skills</a>
+                <a href="#experience" class="nav-link hover:text-purple-900 transition">Experience</a>
+                <a href="#education"
+                   class="nav-link hover:text-purple-900 transition">Education</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
-      </div>
-      <p>Welcome to my portfolio! I’m a passionate and performance-driven mobile developer with over 5 years of experience in building reliable, high-performing mobile applications for Android and Flutter. I’ve developed 30+ mobile apps and led several key projects, always focusing on clean code and seamless user experiences.</p>
-
-      <P>Currently, I work at PremitiveKey, where I contribute to developing innovative and impactful mobile solutions.</p>
-
-      <h4>Mobile Development Expertise:</h4>
-
-      <p>📱 Android & Flutter Development – Building robust and cross-platform apps for both Android and iOS.</p>
-
-      <p> ☕ Kotlin & Java – Proficient in modern and legacy Android development.</p>
-
-      <p>  🧩 Flutter – Creating smooth, efficient, and highly functional cross-platform applications.</p>
-
-      <p>🏗️ Architecture & Optimization – Expertise in MVVM, Clean Architecture, Coroutines, Flow, and Hilt for scalable and reactive code.</p>
-
-      <p>  🎯 State Management – Skilled in GetX for Flutter state management.</p>
-
-      <p>  🧠 Project Leadership – Independently managing and leading mobile projects from start to finish.</p>
-
-      <div class="about-buttons">
-        <a href="#contact" class="btn">Contact Us</a>
-        <a href="assets/resume.pdf" class="btn" download>Get Resume</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" data-aos="fade-up">
-    <div class="projects-card">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Awesome App</h3>
-        <p><strong>Skills:</strong> Flutter, Firebase</p>
-        <p>A social media app with real-time chat, feed, and notifications.</p>
-        <div class="screenshots">
-          <img src="/portfolio/assets/project1/1.png" alt="Screen 1">
-          <img src="/portfolio/assets/project1/2.png" alt="Screen 2">
-          <img src="/portfolio/assets/project1/3.png" alt="Screen 3">
-          <img src="/portfolio/assets/project1/1.png" alt="Screen 1">
-          <img src="/portfolio/assets/project1/2.png" alt="Screen 2">
-          <img src="/portfolio/assets/project1/3.png" alt="Screen 3">
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden mt-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="nav-link hover:text-purple-900 transition">Home</a>
+                <a href="#about" class="nav-link hover:text-purple-900 transition">About</a>
+                <a href="#projects" class="nav-link hover:text-purple-900 transition">Projects</a>
+                <a href="#skills" class="nav-link hover:text-purple-900 transition">Skills</a>
+                <a href="#experience" class="nav-link hover:text-purple-900 transition">Experience</a>
+                <a href="#education"
+                   class="nav-link hover:text-purple-900 transition">Education</a>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</nav>
+<!--home-->
+<section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-red-800 to-purple-900 text-white">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-yellow-300">Mohammed Riyaz Siddiqui</span></h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-[#F0F8FF]">Mobile App Developer (Android, Flutter)</h2>
+            <p class="text-lg mb-8 opacity-90">I build mobile apps that are fast, easy to use, and look great for a smooth user experience.</p>
 
-  <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>AOS.init();</script>
+            <div class="flex space-x-4">
+                <a href="#projects" class="bg-white text-red-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">View My Work</a>
+                <a href="#contact" class="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-red-800 transition">Contact Me</a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center animate-fade-in delay-200">
+            <div class="md:w-1/2 flex justify-center animate-fadeIn delay-200">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-purple-100 rounded-full overflow-hidden border-4 border-purple-900 shadow-xl">
+                        <img src="/portfolio/assets/profile.jpeg" alt="Riyaz Siddiqui" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-[#4C1D95] rounded-full flex items-center justify-center text-white">
+                                <i class="fas fa-code text-xl"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-bold text-[#4C1D95]">5+ Years</p>
+                                <p class="text-sm text-gray-500">Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 animate-fadeIn">About <span class="text-[#991B1B]">Me</span></h2>
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3 md:pl-12 animate-fadeIn delay-200">
+                <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                <p class="text-gray-600 mb-6">
+                    Welcome to my portfolio! I’m a passionate and performance-driven mobile developer with over 5 years of experience in building reliable, high-performing mobile applications for Android and Flutter. I’ve developed 30+ mobile apps and led several key projects, always focusing on clean code and seamless user experiences.
+                </p>
+                <P class="text-gray-600 mb-8">Currently, I work at PremitiveKey, where I contribute to developing innovative and impactful mobile solutions.</p>
+
+                <h4 class="text-2xl font-semibold mb-4">Mobile Development Expertise:</h4>
+
+                <p class="text-gray-600 mb-8">📱 Android & Flutter Development – Building robust and cross-platform apps for both Android and iOS.</p>
+
+                <p class="text-gray-600 mb-8"> ☕ Kotlin & Java – Proficient in modern and legacy Android development.</p>
+
+                <p class="text-gray-600 mb-8">  🧩 Flutter – Creating smooth, efficient, and highly functional cross-platform applications.</p>
+
+                <p class="text-gray-600 mb-8">🏗️ Architecture & Optimization – Expertise in MVVM, Clean Architecture, Coroutines, Flow, and Hilt for scalable and reactive code.</p>
+
+                <p class="text-gray-600 mb-8">  🎯 State Management – Skilled in GetX for Flutter state management.</p>
+
+                <p class="text-gray-600 mb-8" >  🧠 Project Leadership – Independently managing and leading mobile projects from start to finish.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-[#4C1D95] mr-2"></i>
+                        <span>Problem Solving</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-[#4C1D95] mr-2"></i>
+                        <span>Responsive Design</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-[#4C1D95] mr-2"></i>
+                        <span>Clean Code</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-[#4C1D95] mr-2"></i>
+                        <span>Team Collaboration</span>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="/portfolio/assets/riyaz_siddiqui.pdf" class="bg-[#4C1D95] hover:bg-purple-600 text-white px-6 py-2 rounded-lg transition flex items-center">
+                        <i class="fas fa-download mr-2"></i> Download CV
+                    </a>
+                    <a href="#contact" class="border border-[#4C1D95] text-[#4C1D95] font-medium hover:bg-purple-900 hover:text-white px-6 py-2 rounded-lg transition">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">My <span class="text-[#991B1B]">Projects</span></h2>
+        <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+            Here are some of my recent projects. Each one was carefully crafted to solve specific problems and deliver value.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Project 1 -->
+            <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-200">
+                <div class="screenshots">
+                    <img src="/portfolio/assets/project1/l1.PNG" alt="Screen 1">
+                    <img src="/portfolio/assets/project1/l2.PNG" alt="Screen 2">
+                    <img src="/portfolio/assets/project1/l3.PNG" alt="Screen 3">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">LocalKhoj Subscriber</h3>
+                    <p class="text-gray-600 mb-4">
+                        Localkhoj Subscriber App helps people find nearby services, deals, and events. Users can post what they need, and local businesses will get notified. You can like, save, and comment on posts. The app shows only nearby offers, making it easy to discover and connect with local businesses.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        We use Kotlin for Android apps and Flutter for iOS to make apps work smoothly on both platforms.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Hilt</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Coroutines</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Flow</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Navigation</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">places</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Maps</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">MVVM</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">DeepLink</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Kotlin</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Flutter</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Retrofit</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Getx</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Dio</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">AppLink</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Firebase</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">More..</span>
+                    </div>
+
+                    <div class="flex space-x-6 mt-10">
+                        <a href="https://play.google.com/store/apps/details?id=com.yourapp" class="bg-black hover:bg-purple-600 text-white text-sm px-6 py-2 rounded-lg transition flex items-center">
+                            <i class="fab fa-google-play mr-2"></i>Play Store
+                        </a>
+                        <a href="https://apps.apple.com/us/app/your-app/id123456789" class="bg-black hover:bg-purple-600 text-white text-sm px-6 py-2 rounded-lg transition flex items-center">
+                            <i class="fab fa-app-store-ios mr-2"></i>App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-200">
+                <div class="screenshots">
+                    <img src="/portfolio/assets/project2/l1.PNG" alt="intro">
+                    <img src="/portfolio/assets/project2/l2.PNG" alt="home">
+                    <img src="/portfolio/assets/project2/l3.PNG" alt="add offer">
+                    <img src="/portfolio/assets/project2/l4.PNG" alt="offer list">
+                    <img src="/portfolio/assets/project2/l5.PNG" alt="add events">
+                    <img src="/portfolio/assets/project2/l6.PNG" alt="nav">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">LocalKhoj Business</h3>
+                    <p class="text-gray-600 mb-4">
+                        Localkhoj Business App helps local business owners promote their services and connect with nearby customers. They can create offers, events, and a digital business card with location tags. The app includes a CRM option to manage leads and customer interactions. Businesses can also respond directly to user posts and interests.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        We use Kotlin for Android apps and Flutter for iOS to make apps work smoothly on both platforms.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Hilt</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Coroutines</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Flow</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Navigation</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">places</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Maps</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">MVVM</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">DeepLink</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Kotlin</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Flutter</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Retrofit</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Getx</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Dio</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">AppLink</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Firebase</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">More..</span>
+                    </div>
+
+                    <div class="flex space-x-6 mt-10">
+                        <a href="https://play.google.com/store/apps/details?id=com.yourapp" class="bg-black hover:bg-purple-600 text-white text-sm px-6 py-2 rounded-lg transition flex items-center">
+                            <i class="fab fa-google-play mr-2"></i>Play Store
+                        </a>
+                        <a href="https://apps.apple.com/us/app/your-app/id123456789" class="bg-black hover:bg-purple-600 text-white text-sm px-6 py-2 rounded-lg transition flex items-center">
+                            <i class="fab fa-app-store-ios mr-2"></i>App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="more-projects" class="hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-200">
+                    <div class="screenshots">
+                        <img src="/portfolio/assets/project3/s1.jpg" alt="Screen 1">
+                        <img src="/portfolio/assets/project3/s2.jpg" alt="Screen 2">
+                        <img src="/portfolio/assets/project3/s3.png" alt="Screen 3">
+                        <img src="/portfolio/assets/project3/s4.jpg" alt="Screen 4">
+                        <img src="/portfolio/assets/project3/s5.jpg" alt="Screen 5">
+                        <img src="/portfolio/assets/project3/s6.jpg" alt="Screen 6">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sadhan</h3>
+                        <p class="text-gray-600 mb-4">
+                            Sadhan is an app that helps you trade stocks and invest in mutual funds easily. You can buy and sell stocks, and choose mutual funds that match your investment goals. The app makes it simple to track your investments and get expert advice. It also provides support in your own language to help you understand and make smart investment decisions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Hilt</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Coroutines</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Flow</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Navigation</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">MVVM</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Kotlin</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-4 py-1 rounded-full">Retrofit</span>
+                        </div>
+                        <div class="flex space-x-6 mt-10">
+                            <a href="https://play.google.com/store/apps/details?id=com.yourapp" class="bg-black hover:bg-purple-600 text-white text-sm px-6 py-2 rounded-lg transition flex items-center">
+                                <i class="fab fa-google-play mr-2"></i>Play Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="text-center mt-12 animate-fadeIn delay-500">
+            <button id="toggleProjectsBtn" class="inline-block border-2 border-purple-900 text-purple-900 hover:bg-purple-900 hover:text-white px-6 py-3 rounded-lg transition">
+                View All Projects
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 animate-fade-in">My <span class="text-[#991B1B]">Skills</span></h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Mobile Development -->
+            <div class="skill-category bg-white rounded-xl p-6 shadow-md animate-fade-in delay-100">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-mobile-alt text-indigo-600 text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Mobile Development</h4>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Android (Kotlin/Java/Xml)</span>
+                    </li>
+
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Flutter (Dart)</span>
+                    </li>
+
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Android Development</span>
+                    </li>
+
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>iOS Development</span>
+                    </li>
+
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Cross-platform Development</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- T2. Tools & Platforms -->
+            <div class="skill-category bg-white rounded-xl p-6 shadow-md animate-fade-in delay-100">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-tools text-indigo-600 text-xl"></i>
+                    </div>
+                    <h6 class="text-lg font-bold">Tools & Platforms</h6>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Android Studio</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Xcode</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Firebase</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Git & Bitbucket</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>AppsFlyer</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Postman</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Play Store & App Store</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- APIs & Features -->
+            <div class="skill-category bg-white rounded-xl p-6 shadow-md animate-fade-in delay-200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-server text-indigo-600 text-xl"></i>
+                    </div>
+                    <h6 class="text-lg font-bold">APIs & Features</h6>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Retrofit</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Dio</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>REST APIs</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>AppLinks</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>DeepLinks</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Google Maps</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Google Places API</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Location Services</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>CameraX</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!--  Architecture & UI -->
+            <div class="skill-category bg-white rounded-xl p-6 shadow-md animate-fade-in delay-300">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-paint-brush text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">Architecture & UI</h3>
+                </div>
+                <ul class="space-y-2">
+
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>MVVM</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>MVC</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>GetX (Flutter)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Coroutines & Flow</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Dagger Hilt</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Navigation Component</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>WorkManager</span>
+                    </li>
+
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Material Design</span>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <!--  SDK Integrations -->
+            <div class="skill-category bg-white rounded-xl p-6 shadow-md animate-fade-in delay-200">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-project-diagram text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">SDK Integrations</h3>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>PhonePe SDK</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Razorpay SDK</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Paytm SDK</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>AppsFlyer</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>SUNMI Printer SDK</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Data Management & Security -->
+
+            <div class="skill-category bg-white rounded-xl p-6 shadow-md animate-fade-in delay-300">
+                <div class="flex items-center mb-4">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-database text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">Data Management & Security</h3>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Room</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>SQLite</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>SharedPreferences</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>ProGuard</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>AES</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>RSA</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>HA-256</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>MD5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Base64 Encoding/Decoding</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>URL Encoding/Decoding</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 animate-fade-in">Work <span class="text-[#991B1B]">Experience</span></h2>
+
+        <div class="max-w-3xl mx-auto space-y-8">
+            <!-- Experience 1 -->
+            <div class="bg-gray-50 rounded-xl p-6 shadow-md animate-fade-in delay-100">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 class="text-xl font-bold">Senior Mobile Developer</h3>
+                    <span class="text-[#991B1B] font-medium">Premitivekey LLP • Apr 2024 - Present</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                    Senior Mobile Developer with extensive experience in both Android and Flutter, leading cross-platform projects for iOS and Android. Proven ability to drive development efforts, manage teams, and deliver high-quality mobile applications.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Flutter</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">iOS</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">GetX</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">AppsFlyer</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">AppLinks</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Dart</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Problem Solving</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">XCode</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Dio</span>
+                </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="bg-gray-50 rounded-xl p-6 shadow-md animate-fade-in delay-200">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 class="text-xl font-bold">Senior Android Developer </h3>
+                    <span class="text-[#991B1B] font-medium">Premitivekey LLP • Dec 2022 to Mar 2024</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                    Senior Android Developer with expertise in Google Places, Google Maps, Kotlin Coroutines, and Dagger Hilt. Experienced in integrating PhonePe payments, using Git for version control, and applying modern Android practices like View Binding, Navigation Component, and Flow. Strong problem-solving abilities with a focus on delivering high-quality, performant apps.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Dagger Hilt</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Flow</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Coroutines</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Deeplinks</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Sunmi Printer</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Encryption</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Decryption</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Flavors</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">ProGuard</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Payment Gateways</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">MVVM</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Git</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Bitbucket</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Google Places</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Google Maps</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Navigation Component</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">viewBinding</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Material Design</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Room</span>
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="bg-gray-50 rounded-xl p-6 shadow-md animate-fade-in delay-300">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 class="text-xl font-bold">Android Developer</h3>
+                    <span class="text-[#991B1B] font-medium">Coreocean solutions LLP • Dec 2020 - Sep 2022</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                    Skilled Android Developer with a strong background in creating high-quality mobile applications from the ground up. Adept at managing projects independently and delivering innovative solutions to meet user needs.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Coroutines</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Room</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">ProGuard</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">push notifications</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Payment Gateways</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">push notifications</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">SQLite</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Admob</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">MVVM</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">MVC</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Retrofit</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Glide</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Kotlin</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Material Design</span>
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="bg-gray-50 rounded-xl p-6 shadow-md animate-fade-in delay-300">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 class="text-xl font-bold">Junior Android Developer</h3>
+                    <span class="text-[#991B1B] font-medium">S-IT Infotech • Nov 2019 - Oct 2020</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                    Collaborate with senior developers to design and develop Android apps, integrate third-party APIs, apply UI/UX principles, and communicate effectively while solving problems and learning continuously.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Android</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Java</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">XML</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">SQLite</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Glide</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Android SDK</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">REST APIs</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Volley Library</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Education Section -->
+<section id="education" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 animate-fade-in">Education</h2>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+
+
+            <div class="bg-white rounded-xl p-6 shadow-md animate-fade-in delay-200">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                    <div>
+                        <h3 class="text-xl font-bold">B.Sc. in Computer Science</h3>
+                        <p class="text-gray-600">Sanpada College of commerce and technology</p>
+                    </div>
+                    <span class="text-indigo-600 font-medium">2015 - 2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="pt-10 pb-5 md:pt-10 md:pb-8 bg-gradient-to-r from-red-800 to-purple-900 text-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 animate-fade-in hover:text-white">Contact Me</h2>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center animate-fade-in">
+
+                <div class="flex justify-center space-x-8">
+                    <a href="mailto:siddiquiriyaz412@gmail.com" class="bg-white text-indigo-600 p-4 rounded-full hover:bg-gray-100 transition transform hover:scale-110">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="bg-white text-indigo-600 p-4 rounded-full hover:bg-gray-100 transition transform hover:scale-110">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="bg-white text-indigo-600 p-4 rounded-full hover:bg-gray-100 transition transform hover:scale-110">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/riyaz-siddiqui" target="_blank" class="bg-white text-indigo-600 p-4 rounded-full hover:bg-gray-100 transition transform hover:scale-110">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+
+                <div class="mt-12 flex items-center justify-center space-x-6">
+                    <div class="flex items-center">
+                        <div class="bg-indigo-500 p-3 rounded-full mr-2">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span>siddiquiriyaz412@gmail.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-500 p-3 rounded-full mr-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <span>Mumbai, India</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="text-2xl font-bold text-white-400">Mohammed Riyaz Siddiqui</a>
+                <p class="text-gray-400 mt-2">© 2025 All Rights Reserved</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="mailto:siddiquiriyaz412@gmail.com" class="text-gray-400 hover:text-white transition"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/riyaz-siddiqui" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("toggleProjectsBtn");
+      const moreProjects = document.getElementById("more-projects");
+      let isExpanded = false;
+
+      toggleBtn.addEventListener("click", function () {
+        moreProjects.classList.toggle("hidden");
+        isExpanded = !isExpanded;
+        toggleBtn.textContent = isExpanded ? "Show Less" : "View All Projects";
+      });
+    });
+
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Here you would typically send the data to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+
+            // Reset form
+            this.reset();
+        });
+
+        // Add animation classes on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+</script>
 </body>
 </html>
