@@ -1,11 +1,26 @@
+<script>
+  const counter = document.querySelector('.screen-counter');
+  const screenshots = document.querySelectorAll('.screenshot');
+  const container = document.querySelector('.screenshots');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const bars = document.querySelectorAll(".fill");
-  bars.forEach(bar => {
-    const width = bar.style.width;
-    bar.style.width = "0";
-    setTimeout(() => {
-      bar.style.width = width;
-    }, 300);
+  let currentIndex = 0;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const index = Array.from(screenshots).indexOf(entry.target);
+        if (index !== currentIndex) {
+          currentIndex = index;
+          counter.textContent = `${index + 1}/${screenshots.length}`;
+        }
+      }
+    });
+  }, {
+    root: container,
+    threshold: 0.5,
   });
-});
+
+  screenshots.forEach(s => observer.observe(s));
+
+
+</script>
