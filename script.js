@@ -78,12 +78,4 @@ document.querySelectorAll('section h2, .animate-on-scroll').forEach(el => {
     observer.observe(el);
 });
 
-function downloadPDF() {
-  const link = document.createElement('a');
-  link.href = '/portfolio/assets/riyaz_siddiqui.pdf';
-  link.download = 'riyaz_siddiqui.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
 
