@@ -18,5 +18,76 @@
   background-color: #eee;
 }
 
+/* Project card hover effect */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 640px) {
+  .screenshots {
+    height: 200px; /* smaller height on mobile */
+    gap: 8px;
+    padding: 8px 0;
+  }
+  .screenshots::-webkit-scrollbar {
+    height: 4px; /* Set your desired scrollbar height here */
+  }
+
+  .screenshots::-webkit-scrollbar-thumb {
+    background-color: #4C1D95;
+    border-radius: 1px;
+  }
+}
+/* Custom CSS for animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4C1D95;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #991B1B;
+    border-radius: 4px;
+}
+
+/* Active nav link */
+.nav-link.active {
+    color: #991B1B;
+    font-weight: 600;
+}
+
+/* Project card hover effect */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+
 
 
