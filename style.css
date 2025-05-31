@@ -6,16 +6,16 @@
   padding: 10px 0;
 }
 .screenshots::-webkit-scrollbar {
-  height: 6px; /* Set your desired scrollbar height here */
+  height: 4px; /* Set your desired scrollbar height here */
 }
 
 .screenshots::-webkit-scrollbar-thumb {
-  background-color: #4C1D95;
+  background-color: #eee;
   border-radius: 3px;
 }
 
 .screenshots::-webkit-scrollbar-track {
-  background-color: #eee;
+  background-color: #003C43;
 }
 
 /* Project card hover effect */
@@ -29,17 +29,17 @@
 }
 @media (max-width: 640px) {
   .screenshots {
-    height: 200px; /* smaller height on mobile */
+    height: 220px; /* smaller height on mobile */
     gap: 8px;
     padding: 8px 0;
   }
   .screenshots::-webkit-scrollbar {
-    height: 4px; /* Set your desired scrollbar height here */
+    height: 3px; /* Set your desired scrollbar height here */
   }
 
   .screenshots::-webkit-scrollbar-thumb {
-    background-color: #4C1D95;
-    border-radius: 1px;
+    background-color: #eee;
+    border-radius: 2px;
   }
 }
 /* Custom CSS for animations */
@@ -59,21 +59,21 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #4C1D95;
+    background: #003C43;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #991B1B;
+    background: #F79B72;
     border-radius: 4px;
 }
 
 /* Active nav link */
 .nav-link.active {
-    color: #991B1B;
+    color: #F79B72;
     font-weight: 600;
 }
 
@@ -86,8 +86,4 @@
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-
-
-
-
 
